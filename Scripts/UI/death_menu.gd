@@ -8,6 +8,7 @@ func show_death_screen():
 	
 	show()
 	death_background.show()
+	death_background.get_child(0).text = "Рубинов: " + str(Data.rubins)
 	$AdRespawnButton.disabled = false
 	$RestartButton.disabled = false
 
@@ -18,6 +19,10 @@ func hide_death_screen():
 	$RestartButton.disabled = true
 
 func _on_ad_respawn_button_pressed():
+	if Data.rubins <= 0:
+		return
+	
+	Data.rubins -= 1
 	$/root/Main/Player.respawn()
 	hide_death_screen()
 
