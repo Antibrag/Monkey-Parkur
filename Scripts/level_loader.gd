@@ -31,6 +31,7 @@ func fill_aviable_levels_array(game_is_restarted: bool = true):
 
 func restart():
 	Data.bananas += Data.distance
+	Data.rubins += floori(Data.distance / 50)
 	
 	if Data.distance > Data.max_distance:
 		Data.max_distance = Data.distance
