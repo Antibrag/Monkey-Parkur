@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://drisv2et2gx2b"]
+
+[ext_resource type="Texture2D" uid="uid://c3b7reidamwr7" path="res://Assets/hook-barnch.png" id="1_qo214"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jln7"]
+size = Vector2(32, 24)
+
+[node name="BranchToTail" type="StaticBody2D"]
+scale = Vector2(0.5, 0.5)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_1jln7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_qo214")

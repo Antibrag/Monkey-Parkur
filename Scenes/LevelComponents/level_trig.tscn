@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://237d615sc1ow"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12u85"]
+size = Vector2(20, 700)
+
+[node name="LevelTrigger" type="Area2D" groups=["EndTrigger"]]
+position = Vector2(2570, 0)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 350)
+shape = SubResource("RectangleShape2D_12u85")

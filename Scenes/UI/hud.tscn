@@ -1,0 +1,380 @@
+[gd_scene load_steps=21 format=3 uid="uid://cnna6b656uwos"]
+
+[ext_resource type="Script" path="res://Scripts/UI/hud.gd" id="1_x8gi5"]
+[ext_resource type="Texture2D" uid="uid://clkuhxb142ksg" path="res://Assets/UI/kenney_cursor-pack/Vector/Basic/arrow_n.svg" id="2_7i2tn"]
+[ext_resource type="Script" path="res://Scripts/UI/shop_buttons.gd" id="2_8l0wt"]
+[ext_resource type="Texture2D" uid="uid://cw32bx1urthr3" path="res://Assets/UI/kenney_cursor-pack/Vector/Basic/drawing_brush.svg" id="3_opt2d"]
+[ext_resource type="Script" path="res://Scripts/shop.gd" id="5_f5wn3"]
+[ext_resource type="Texture2D" uid="uid://cacly8en3t4fg" path="res://Assets/ShopIcons/tail_product_ico.png" id="5_kxlax"]
+[ext_resource type="Script" path="res://Scripts/UI/death_menu.gd" id="5_wepfc"]
+[ext_resource type="Texture2D" uid="uid://c0ica2i1v056t" path="res://Assets/ShopIcons/idle_product_ico.png" id="6_3c1ar"]
+[ext_resource type="Texture2D" uid="uid://dvw634cimadkk" path="res://Assets/ShopIcons/black_product_ico.png" id="6_8m3y8"]
+[ext_resource type="Texture2D" uid="uid://dvbukb4wx4rqm" path="res://Assets/ShopIcons/dash_product_ico.png" id="7_71r6j"]
+[ext_resource type="Texture2D" uid="uid://bl1age8iqimbw" path="res://Assets/Monkey/Devil/product_ico.png" id="8_q0vsv"]
+[ext_resource type="Texture2D" uid="uid://c7o5n03yrjxrs" path="res://Assets/Monkey/Shadow/product_ico.png" id="9_t18ou"]
+[ext_resource type="Texture2D" uid="uid://dckj4xkqpo708" path="res://Assets/Monkey/Cyber/product_ico.png" id="10_k7qo3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j1rle"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_uuea3"]
+font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_1pbwy"]
+font_size = 20
+font_color = Color(0.889413, 0.889413, 3.85046e-07, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dhisf"]
+line_spacing = 0.0
+font_size = 11
+font_color = Color(0.995764, 1, 0.318079, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rjfng"]
+font_size = 48
+font_color = Color(0.999993, 0.404016, 0.439679, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_u7obe"]
+line_spacing = 0.0
+font_size = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_k8ryd"]
+font_size = 12
+font_color = Color(0.644464, 0.557746, 0.344394, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_x8gi5")
+
+[node name="DistanceLabel" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 329.0
+offset_bottom = 40.0
+text = "Пройденное расстояние: "
+label_settings = SubResource("LabelSettings_j1rle")
+
+[node name="MaxDistanceLabel" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 40.0
+offset_right = 329.0
+offset_bottom = 64.0
+text = "Лучший результат: "
+label_settings = SubResource("LabelSettings_uuea3")
+
+[node name="BananaLabel" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 128.0
+offset_bottom = 36.0
+text = "Бананов:"
+label_settings = SubResource("LabelSettings_1pbwy")
+
+[node name="LevelNameLabel" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -112.0
+offset_right = -32.0
+offset_bottom = -78.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Уровень: -1"
+label_settings = SubResource("LabelSettings_j1rle")
+vertical_alignment = 1
+
+[node name="LevelAuthorLabel" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -184.0
+offset_top = -80.0
+offset_right = -48.0
+offset_bottom = -56.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "    Автор: San4hi"
+label_settings = SubResource("LabelSettings_uuea3")
+vertical_alignment = 1
+clip_text = true
+
+[node name="LevelRequiresLabel" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -216.0
+offset_top = -48.0
+offset_right = 54.0
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.8, 0.8)
+label_settings = SubResource("LabelSettings_uuea3")
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+
+[node name="Shops" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Buttons" type="VSplitContainer" parent="Shops"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = -60.0
+offset_right = 64.0
+offset_bottom = 32.0
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+split_offset = 10
+collapsed = true
+dragger_visibility = 1
+script = ExtResource("2_8l0wt")
+metadata/_edit_group_ = true
+
+[node name="UpgradesShop" type="Button" parent="Shops/Buttons"]
+layout_mode = 2
+icon = ExtResource("2_7i2tn")
+language = "ru_RU"
+
+[node name="SkinsShop" type="Button" parent="Shops/Buttons"]
+layout_mode = 2
+icon = ExtResource("3_opt2d")
+language = "ru_RU"
+
+[node name="ButtonTextCleaner" type="Timer" parent="Shops/Buttons"]
+wait_time = 0.5
+one_shot = true
+
+[node name="SkinsShopPanel" type="Control" parent="Shops" node_paths=PackedStringArray("anouther_shop")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -976.0
+offset_top = -192.0
+offset_right = -648.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_f5wn3")
+anouther_shop = NodePath("../UpgradesShopPanel")
+metadata/_edit_group_ = true
+
+[node name="ShopName" type="Label" parent="Shops/SkinsShopPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.062
+anchor_right = 1.0
+offset_top = -0.191999
+text = "Магазин скинов"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GoodsContainer" type="ItemList" parent="Shops/SkinsShopPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+max_text_lines = 3
+text_overrun_behavior = 0
+item_count = 5
+item_0/text = "Стандартный (Имеется)"
+item_0/icon = ExtResource("6_3c1ar")
+item_1/text = "Черныш (1000 бананов)"
+item_1/icon = ExtResource("6_8m3y8")
+item_2/text = "Тень (1500 бананов)"
+item_2/icon = ExtResource("9_t18ou")
+item_3/text = "Демоненок (2000 бананов)"
+item_3/icon = ExtResource("8_q0vsv")
+item_4/text = "Киборг  (3000 бананов)"
+item_4/icon = ExtResource("10_k7qo3")
+
+[node name="NoteLabel" type="Label" parent="Shops/SkinsShopPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -164.0
+offset_top = 4.0
+offset_right = 164.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Нажмите два раза по скину, чтобы купить или выбрать его (если он уже куплен)"
+label_settings = SubResource("LabelSettings_dhisf")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="UpgradesShopPanel" type="Control" parent="Shops" node_paths=PackedStringArray("anouther_shop")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -976.0
+offset_top = -192.0
+offset_right = -648.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_f5wn3")
+anouther_shop = NodePath("../SkinsShopPanel")
+
+[node name="ShopName" type="Label" parent="Shops/UpgradesShopPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.062
+anchor_right = 1.0
+offset_top = -0.191999
+text = "Магазин улучшений"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GoodsContainer" type="ItemList" parent="Shops/UpgradesShopPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+max_text_lines = 3
+text_overrun_behavior = 0
+item_count = 2
+item_0/text = "Крепкий хвост (250 бананов)"
+item_0/icon = ExtResource("5_kxlax")
+item_1/text = "Рывок (500 бананов)"
+item_1/icon = ExtResource("7_71r6j")
+
+[node name="NoteLabel" type="Label" parent="Shops/UpgradesShopPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -164.0
+offset_top = 4.0
+offset_right = 164.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Нажмите два раза по улучшению, чтобы купить его. После покупки улучшения следующий уровень будет - обучающим"
+label_settings = SubResource("LabelSettings_dhisf")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="DeathBackground" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.137255, 0.137255, 0.137255, 1)
+
+[node name="DeathMenu" type="VBoxContainer" parent="." node_paths=PackedStringArray("death_background")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.5
+offset_top = -59.0
+offset_right = 135.5
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_wepfc")
+death_background = NodePath("../DeathBackground")
+
+[node name="DeathLabel" type="Label" parent="DeathMenu"]
+layout_mode = 2
+text = "Вы мертвы"
+label_settings = SubResource("LabelSettings_rjfng")
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "ru_RU"
+
+[node name="DistanceLabel" type="Label" parent="DeathMenu"]
+layout_mode = 2
+text = "Ваш счет:"
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "ru_RU"
+
+[node name="BestDistanceLabel" type="Label" parent="DeathMenu"]
+layout_mode = 2
+text = "Лучший рекорд:"
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "ru_RU"
+
+[node name="Space" type="Label" parent="DeathMenu"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "ru_RU"
+
+[node name="AdRespawnButton" type="Button" parent="DeathMenu"]
+layout_mode = 2
+text = "Возродиться за рекламу"
+language = "ru_RU"
+
+[node name="Space2" type="Label" parent="DeathMenu"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_u7obe")
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "ru_RU"
+
+[node name="RestartButton" type="Button" parent="DeathMenu"]
+layout_mode = 2
+text = "Начать сначала"
+language = "ru_RU"
+
+[node name="Note" type="Label" parent="DeathMenu"]
+layout_mode = 2
+text = "Внимание: после рестарта ваше
+пройденное расстояние
+будет коневертированно в бананы"
+label_settings = SubResource("LabelSettings_k8ryd")
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "ru_RU"
+
+[connection signal="mouse_entered" from="Shops/Buttons/UpgradesShop" to="Shops/Buttons" method="_on_upgrades_shop_mouse_entered"]
+[connection signal="mouse_exited" from="Shops/Buttons/UpgradesShop" to="Shops/Buttons" method="_on_upgrades_shop_mouse_exited"]
+[connection signal="pressed" from="Shops/Buttons/UpgradesShop" to="Shops/UpgradesShopPanel" method="_on_upgrades_shop_pressed"]
+[connection signal="mouse_entered" from="Shops/Buttons/SkinsShop" to="Shops/Buttons" method="_on_skins_shop_mouse_entered"]
+[connection signal="mouse_exited" from="Shops/Buttons/SkinsShop" to="Shops/Buttons" method="_on_skins_shop_mouse_exited"]
+[connection signal="pressed" from="Shops/Buttons/SkinsShop" to="Shops/SkinsShopPanel" method="_on_skins_shop_pressed"]
+[connection signal="timeout" from="Shops/Buttons/ButtonTextCleaner" to="Shops/Buttons" method="_on_button_text_cleaner_timeout"]
+[connection signal="item_activated" from="Shops/SkinsShopPanel/GoodsContainer" to="Shops/SkinsShopPanel" method="_on_skins_container_item_activated"]
+[connection signal="item_activated" from="Shops/UpgradesShopPanel/GoodsContainer" to="Shops/UpgradesShopPanel" method="_on_upgrades_container_item_activated"]
+[connection signal="pressed" from="DeathMenu/AdRespawnButton" to="DeathMenu" method="_on_ad_respawn_button_pressed"]
+[connection signal="pressed" from="DeathMenu/RestartButton" to="DeathMenu" method="_on_restart_button_pressed"]

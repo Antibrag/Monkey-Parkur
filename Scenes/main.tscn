@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://dtc5yg3pvs3sa"]
+
+[ext_resource type="PackedScene" uid="uid://cnna6b656uwos" path="res://Scenes/UI/hud.tscn" id="1_cyp0w"]
+[ext_resource type="Texture2D" uid="uid://bthrn1tt243fr" path="res://Assets/Background/j4.png" id="1_xru2r"]
+[ext_resource type="Texture2D" uid="uid://dkl824ap3r2ys" path="res://Assets/Background/j3.png" id="2_bpmt5"]
+[ext_resource type="Texture2D" uid="uid://c2wyqe2ioxgcw" path="res://Assets/Background/j1.png" id="4_alb7h"]
+[ext_resource type="PackedScene" uid="uid://b3csk5pyt6yvq" path="res://Scenes/Levels/level_start.tscn" id="5_uq8so"]
+[ext_resource type="PackedScene" uid="uid://dx84tr7uxfdwq" path="res://Scenes/player.tscn" id="5_ve0ds"]
+[ext_resource type="AudioStream" uid="uid://ehngro7p6vy1" path="res://Assets/Music/shadows-and-mist-escape-by-night-main-version-24858-05-39.mp3" id="7_ucue8"]
+[ext_resource type="AudioStream" uid="uid://r1x11ejlun7y" path="res://Assets/Music/aged-wisdom-ian-aisling-main-version-24982-02-01.mp3" id="8_pobci"]
+[ext_resource type="AudioStream" uid="uid://sopp3su0d3sq" path="res://Assets/Music/skylight-simon-folwar-main-version-25232-03-28.mp3" id="9_m77eo"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_tf481"]
+shuffle = true
+fade_time = 1.0
+stream_count = 3
+stream_0 = ExtResource("8_pobci")
+stream_1 = ExtResource("9_m77eo")
+stream_2 = ExtResource("7_ucue8")
+
+[node name="Main" type="Node"]
+
+[node name="Player" parent="." node_paths=PackedStringArray("respawn_node") instance=ExtResource("5_ve0ds")]
+position = Vector2(576, 344)
+respawn_node = NodePath("../RespawnNode")
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+scale = Vector2(0.5, 0.5)
+limit_left = -200
+limit_top = 0
+limit_bottom = 648
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+editor_draw_limits = true
+
+[node name="RespawnNode" type="Node2D" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("1_cyp0w")]
+
+[node name="Background" type="ParallaxBackground" parent="."]
+offset = Vector2(0, 325)
+transform = Transform2D(1, 0, 0, 1, 0, 325)
+
+[node name="Rect" type="ParallaxLayer" parent="Background"]
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Rect"]
+position = Vector2(450, 4)
+scale = Vector2(0.811458, 1)
+texture = ExtResource("1_xru2r")
+
+[node name="DistantTrees" type="ParallaxLayer" parent="Background"]
+motion_mirroring = Vector2(1485.42, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/DistantTrees"]
+position = Vector2(434.75, -4)
+scale = Vector2(0.390234, 0.613889)
+texture = ExtResource("2_bpmt5")
+
+[node name="Trees" type="ParallaxLayer" parent="Background"]
+motion_mirroring = Vector2(1800, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Trees"]
+position = Vector2(548, -33)
+scale = Vector2(0.240104, 0.696296)
+texture = ExtResource("4_alb7h")
+
+[node name="Levels" type="Node" parent="."]
+
+[node name="StartLevel" parent="Levels" instance=ExtResource("5_uq8so")]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamPlaylist_tf481")
+volume_db = -15.0
+autoplay = true

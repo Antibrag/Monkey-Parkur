@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsv7slea70n2b"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_apla8"]
+a = Vector2(0, 750)
+b = Vector2(2570, 750)
+
+[node name="DeathZone" type="Area2D" groups=["DeathZone"]]
+position = Vector2(-344, 0)
+collision_layer = 8
+collision_mask = 8
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_apla8")

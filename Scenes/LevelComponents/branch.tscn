@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk60lofqc6ac2"]
+
+[ext_resource type="Texture2D" uid="uid://0gxuymfs8h6k" path="res://Assets/branch-beta.png" id="1_piaws"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wyxva"]
+size = Vector2(32.1765, 4.91288)
+
+[node name="Branch" type="Area2D" groups=["Branch"]]
+z_index = -1
+scale = Vector2(3.01462, 3.0532)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(16, 0)
+texture = ExtResource("1_piaws")
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16.0883, -0.491288)
+shape = SubResource("RectangleShape2D_wyxva")
+
+[node name="PlayerPoint" type="Marker2D" parent="."]

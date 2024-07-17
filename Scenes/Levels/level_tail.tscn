@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=4 uid="uid://770v4o8vpi7k"]
+
+[ext_resource type="PackedScene" uid="uid://drisv2et2gx2b" path="res://Scenes/LevelComponents/branch_to_tail.tscn" id="1_jka24"]
+[ext_resource type="PackedScene" uid="uid://dk60lofqc6ac2" path="res://Scenes/LevelComponents/branch.tscn" id="1_jlohr"]
+[ext_resource type="Texture2D" uid="uid://bwbcc41pocpse" path="res://Assets/UI/kenney_cursor-pack/Vector/Outline/arrow_ne.svg" id="1_twik1"]
+[ext_resource type="PackedScene" uid="uid://237d615sc1ow" path="res://Scenes/LevelComponents/level_trig.tscn" id="3_5u60t"]
+[ext_resource type="TileSet" uid="uid://c61rnxu8kpabt" path="res://Assets/Resources/terrain_tile_set.tres" id="3_5wpgv"]
+[ext_resource type="PackedScene" uid="uid://bsv7slea70n2b" path="res://Scenes/LevelComponents/death_zone.tscn" id="4_sqi1j"]
+[ext_resource type="Texture2D" uid="uid://rhdkc56h6hhg" path="res://Assets/UI/kenney_cursor-pack/Vector/Outline/arrow_e.svg" id="7_6rkdh"]
+[ext_resource type="Texture2D" uid="uid://6e4ckjql3ykr" path="res://Assets/UI/Keyboard & Mouse/Vector/mouse_right_outline.svg" id="8_0m2y2"]
+[ext_resource type="Texture2D" uid="uid://b4ix6tew72ay7" path="res://Assets/UI/Keyboard & Mouse/Vector/keyboard_w_outline.svg" id="9_6p5n5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o28e8"]
+font_size = 18
+
+[node name="Level" type="Node2D"]
+
+[node name="Promts" type="Node2D" parent="."]
+
+[node name="ArrowNe" type="Sprite2D" parent="Promts"]
+position = Vector2(840, 312)
+texture = ExtResource("1_twik1")
+
+[node name="ArrowE" type="Sprite2D" parent="Promts"]
+position = Vector2(992, 88)
+texture = ExtResource("7_6rkdh")
+
+[node name="MouseRightOutline" type="Sprite2D" parent="Promts"]
+position = Vector2(944, 88)
+texture = ExtResource("8_0m2y2")
+
+[node name="MouseRightOutline2" type="Sprite2D" parent="Promts"]
+position = Vector2(1080, 360)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("8_0m2y2")
+
+[node name="Label" type="Label" parent="Promts"]
+offset_left = 896.0
+offset_top = 344.0
+offset_right = 1061.0
+offset_bottom = 370.0
+text = "Отпустить хвост - "
+label_settings = SubResource("LabelSettings_o28e8")
+
+[node name="Label2" type="Label" parent="Promts"]
+offset_left = 896.0
+offset_top = 400.0
+offset_right = 1093.0
+offset_bottom = 426.0
+text = "Спрыгнуть с  хвоста - "
+label_settings = SubResource("LabelSettings_o28e8")
+
+[node name="Branches" type="Node2D" parent="."]
+
+[node name="Branch" parent="Branches" instance=ExtResource("1_jlohr")]
+position = Vector2(2136, 224)
+rotation = 3.14159
+scale = Vector2(4.73143, 3.0532)
+
+[node name="Spikes" type="Node2D" parent="."]
+
+[node name="HookBranches" type="Node2D" parent="."]
+scale = Vector2(4, 4)
+
+[node name="HookBranch" parent="HookBranches" instance=ExtResource("1_jka24")]
+position = Vector2(264, 22)
+rotation = 3.14159
+
+[node name="HookBranch2" parent="HookBranches" instance=ExtResource("1_jka24")]
+position = Vector2(408, 20)
+rotation = 2.35619
+
+[node name="EarthTiles" type="TileMapLayer" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAEAAQAAAAEAAIAAAAEAAUAAAAEAAMAAAAFAAQAAAAFAAIAAAAFAAUAAAAFAAMAAAAGAAQAAAAGAAIAAAAGAAUAAAAGAAMAAAAHAAQAAAAHAAIAAAAHAAUAAAAHAAMAAAAIAAQAAAAIAAIAAAAIAAUAAAAIAAMAAAAEAAYAAAAEAAQAAAAFAAYAAAAFAAQAAAAGAAYAAAAGAAQAAAAHAAYAAAAHAAQAAAAIAAYAAAAIAAQAAAAEAAcAAAAEAAQAAAAFAAcAAAAFAAQAAAAGAAcAAAAGAAQAAAAHAAcAAAAHAAQAAAAIAAcAAAAIAAQAAAAEAAgAAAAEAAQAAAAFAAgAAAAFAAQAAAAGAAgAAAAGAAQAAAAHAAgAAAAHAAQAAAAIAAgAAAAIAAQAAAAEAAkAAAAEAAQAAAAFAAkAAAAFAAQAAAAGAAkAAAAGAAQAAAAHAAkAAAAHAAQAAAAIAAkAAAAIAAQAAAAEAAoAAAAEAAQAAAAFAAoAAAAFAAQAAAAGAAoAAAAGAAQAAAAHAAoAAAAHAAQAAAAIAAoAAAAIAAQAAAAEAAsAAAAEAAQAAAAFAAsAAAAFAAQAAAAGAAsAAAAGAAQAAAAHAAsAAAAHAAQAAAAIAAsAAAAIAAQAAAAMAAUAAAANAAIAAAAQAAAAAAANAAIAAAAUAAUAAAANAAQAAAAVAAUAAAARAAQAAAAZAAAAAAANAAIAAAAdAAUAAAANAAQAAAAeAAUAAAARAAQAAAAhAAYAAAAEAAMAAAAiAAYAAAAFAAQAAAAlAAYAAAAHAAQAAAAmAAYAAAAIAAMAAAAkAAYAAAAGAAQAAAAjAAYAAAAGAAQAAAAhAAcAAAAEAAQAAAAiAAcAAAAFAAQAAAAhAAgAAAAEAAQAAAAiAAgAAAAFAAQAAAAhAAkAAAAEAAQAAAAiAAkAAAAFAAQAAAAhAAoAAAAEAAQAAAAiAAoAAAAFAAQAAAAhAAsAAAAEAAQAAAAiAAsAAAAFAAQAAAAhAAwAAAAEAAQAAAAiAAwAAAAFAAQAAAAkAAcAAAAGAAQAAAAlAAcAAAAHAAQAAAAmAAcAAAAIAAQAAAAkAAgAAAAGAAQAAAAlAAgAAAAHAAQAAAAmAAgAAAAIAAQAAAAkAAkAAAAGAAQAAAAlAAkAAAAHAAQAAAAmAAkAAAAIAAQAAAAkAAoAAAAGAAQAAAAlAAoAAAAHAAQAAAAmAAoAAAAIAAQAAAAkAAsAAAAGAAQAAAAlAAsAAAAHAAQAAAAmAAsAAAAIAAQAAAAkAAwAAAAGAAQAAAAlAAwAAAAHAAQAAAAmAAwAAAAIAAQAAAAjAAcAAAAGAAQAAAAjAAgAAAAGAAQAAAAjAAkAAAAGAAQAAAAjAAoAAAAGAAQAAAAjAAsAAAAGAAQAAAAjAAwAAAAGAAQAAAAhAAMAAAAEAAIAAAAiAAMAAAAFAAIAAAAjAAMAAAAGAAIAAAAkAAMAAAAHAAIAAAAlAAMAAAAHAAIAAAAmAAMAAAAIAAIAAAAlAAQAAAAHAAMAAAAmAAQAAAAIAAMAAAAhAAQAAAAEAAMAAAAiAAQAAAAFAAMAAAAjAAQAAAAGAAMAAAAkAAQAAAAGAAMAAAAkAAUAAAAGAAQAAAAlAAUAAAAHAAQAAAAmAAUAAAAIAAQAAAAhAAUAAAAEAAQAAAAiAAUAAAAFAAQAAAAjAAUAAAAGAAQAAAABAAMAAAANAAIAAAA=")
+tile_set = ExtResource("3_5wpgv")
+
+[node name="LevelTrigger" parent="." instance=ExtResource("3_5u60t")]
+
+[node name="DeathZone" parent="." instance=ExtResource("4_sqi1j")]
+
+[node name="KeyboardWOutline" type="Sprite2D" parent="."]
+position = Vector2(1120, 416)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("9_6p5n5")

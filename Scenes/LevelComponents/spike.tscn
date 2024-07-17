@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3etaeahnu01e"]
+
+[ext_resource type="Texture2D" uid="uid://bimxo3qh4w5sk" path="res://Assets/spikes_ground.png" id="1_klh1o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqlv3"]
+size = Vector2(64, 24)
+
+[node name="Spikes" type="Area2D" groups=["DeathTile"]]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_klh1o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_rqlv3")

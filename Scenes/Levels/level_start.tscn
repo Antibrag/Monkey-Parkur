@@ -1,0 +1,167 @@
+[gd_scene load_steps=13 format=4 uid="uid://b3csk5pyt6yvq"]
+
+[ext_resource type="Texture2D" uid="uid://dip8hh7wq4ueo" path="res://Assets/UI/Keyboard & Mouse/Default/keyboard_w_outline.png" id="1_5ulf5"]
+[ext_resource type="PackedScene" uid="uid://wrk5haucvpd3" path="res://Scenes/LevelComponents/base_liana.tscn" id="2_tj4ku"]
+[ext_resource type="PackedScene" uid="uid://237d615sc1ow" path="res://Scenes/LevelComponents/level_trig.tscn" id="2_x8td2"]
+[ext_resource type="TileSet" uid="uid://c61rnxu8kpabt" path="res://Assets/Resources/terrain_tile_set.tres" id="3_jyne3"]
+[ext_resource type="PackedScene" uid="uid://bsv7slea70n2b" path="res://Scenes/LevelComponents/death_zone.tscn" id="3_si3di"]
+[ext_resource type="Texture2D" uid="uid://kdrgc68k1tlv" path="res://Assets/UI/Keyboard & Mouse/Vector/mouse_left_outline.svg" id="4_byqcl"]
+[ext_resource type="PackedScene" uid="uid://dk60lofqc6ac2" path="res://Scenes/LevelComponents/branch.tscn" id="4_xkkp7"]
+[ext_resource type="Texture2D" uid="uid://oi0qmg4rspbd" path="res://Assets/UI/Keyboard & Mouse/Vector/keyboard_a_outline.svg" id="7_scmyf"]
+[ext_resource type="Texture2D" uid="uid://y5sce6pd1er6" path="res://Assets/UI/Keyboard & Mouse/Vector/keyboard_d_outline.svg" id="8_oti1r"]
+[ext_resource type="PackedScene" uid="uid://d04slth11j84w" path="res://Scenes/LevelComponents/level_grett_trigger.tscn" id="10_pm1v2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t4qpa"]
+font_size = 24
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkqoq"]
+size = Vector2(592, 360)
+
+[node name="StartLevel" type="Node2D"]
+
+[node name="Promts" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="Promts"]
+offset_left = 320.0
+offset_top = 101.6
+offset_right = 440.0
+offset_bottom = 135.6
+scale = Vector2(0.8, 0.8)
+text = "Прыжок - "
+label_settings = SubResource("LabelSettings_t4qpa")
+language = "ru_RU"
+
+[node name="Label2" type="Label" parent="Promts"]
+offset_left = 320.0
+offset_top = 141.6
+offset_right = 517.0
+offset_bottom = 175.6
+scale = Vector2(0.8, 0.8)
+text = "Перемещение - "
+label_settings = SubResource("LabelSettings_t4qpa")
+language = "ru_RU"
+
+[node name="Label3" type="Label" parent="Promts"]
+offset_left = 1296.0
+offset_top = 193.6
+offset_right = 1504.0
+offset_bottom = 227.6
+scale = Vector2(0.8, 0.8)
+text = "Схватить палку - "
+label_settings = SubResource("LabelSettings_t4qpa")
+language = "ru_RU"
+
+[node name="KeyboardWOutline" type="Sprite2D" parent="Promts"]
+position = Vector2(448, 113.6)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_5ulf5")
+
+[node name="KeyboardAOutline" type="Sprite2D" parent="Promts"]
+position = Vector2(505.6, 155.2)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_scmyf")
+
+[node name="KeyboardDOutline" type="Sprite2D" parent="Promts"]
+position = Vector2(553.6, 155.2)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_oti1r")
+
+[node name="KeyboardDOutline2" type="Sprite2D" parent="Promts"]
+position = Vector2(1592, 360)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_oti1r")
+
+[node name="MouseLeftOutline" type="Sprite2D" parent="Promts"]
+position = Vector2(1488, 209.6)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_byqcl")
+
+[node name="Label4" type="Label" parent="Promts"]
+offset_left = 1296.0
+offset_top = 297.6
+offset_right = 1532.0
+offset_bottom = 331.6
+scale = Vector2(0.8, 0.8)
+text = "Прыгнуть с палки - "
+label_settings = SubResource("LabelSettings_t4qpa")
+language = "ru_RU"
+
+[node name="Label5" type="Label" parent="Promts"]
+offset_left = 1296.0
+offset_top = 241.6
+offset_right = 1518.0
+offset_bottom = 275.6
+scale = Vector2(0.8, 0.8)
+text = "Отпустить палку - "
+label_settings = SubResource("LabelSettings_t4qpa")
+language = "ru_RU"
+
+[node name="KeyboardWOutline2" type="Sprite2D" parent="Promts"]
+position = Vector2(1512, 313.6)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_5ulf5")
+
+[node name="Label6" type="Label" parent="Promts"]
+offset_left = 1296.0
+offset_top = 345.6
+offset_right = 1641.0
+offset_bottom = 379.6
+scale = Vector2(0.8, 0.8)
+text = "Прыгнуть с направлением - "
+label_settings = SubResource("LabelSettings_t4qpa")
+language = "ru_RU"
+
+[node name="KeyboardWOutline3" type="Sprite2D" parent="Promts"]
+position = Vector2(1640, 360)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_5ulf5")
+
+[node name="MouseLeftOutline2" type="Sprite2D" parent="Promts"]
+position = Vector2(1496, 257.6)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_byqcl")
+
+[node name="Branches" type="Node2D" parent="."]
+
+[node name="Branch" parent="Branches" instance=ExtResource("4_xkkp7")]
+position = Vector2(1248, 96)
+rotation = 1.57079
+scale = Vector2(7.03197, 3.03358)
+
+[node name="Branch3" parent="Branches" instance=ExtResource("4_xkkp7")]
+position = Vector2(1632, 96)
+rotation = 1.5708
+scale = Vector2(7.05378, 3.01989)
+
+[node name="Lians" type="Node2D" parent="."]
+
+[node name="Liana" type="Node2D" parent="Lians"]
+position = Vector2(2144, 480)
+rotation = -1.5708
+
+[node name="BaseLiana" parent="Lians/Liana" instance=ExtResource("2_tj4ku")]
+scale = Vector2(9.136, 2)
+
+[node name="EarthTiles" type="TileMapLayer" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAABAAYAAAAFAAIAAAABAAcAAAAGAAMAAAACAAYAAAAGAAIAAAACAAcAAAAGAAMAAAADAAYAAAAGAAIAAAADAAcAAAAGAAMAAAAEAAYAAAAGAAIAAAAEAAcAAAAGAAMAAAAFAAYAAAAGAAIAAAAFAAcAAAAGAAMAAAAGAAYAAAAGAAIAAAAGAAcAAAAGAAMAAAAHAAYAAAAHAAIAAAAHAAcAAAAHAAMAAAAIAAYAAAAIAAIAAAAIAAcAAAAIAAMAAAAHAAgAAAAHAAQAAAAIAAgAAAAIAAQAAAAHAAkAAAAHAAQAAAAIAAkAAAAIAAQAAAACAAgAAAAGAAQAAAACAAkAAAAGAAQAAAADAAgAAAAGAAQAAAADAAkAAAAGAAQAAAAEAAgAAAAGAAQAAAAEAAkAAAAGAAQAAAAFAAgAAAAGAAQAAAAFAAkAAAAGAAQAAAAGAAgAAAAGAAQAAAAGAAkAAAAGAAQAAAALAAYAAAAKAAIAAAALAAcAAAAKAAMAAAAMAAYAAAALAAIAAAAMAAcAAAALAAMAAAAPAAYAAAAKAAIAAAAPAAcAAAAKAAMAAAAQAAYAAAALAAIAAAAQAAcAAAALAAMAAAAAAP//AAAGAAUAAAAAAAAAAAAHAAYAAAD/////AAAGAAUAAAD//wEAAAAIAAQAAAD//wIAAAAIAAQAAAD//wMAAAAIAAQAAAD//wQAAAAIAAQAAAD//wUAAAAIAAQAAAD//wAAAAANAA4AAAD//wYAAAANABEAAAAAAAYAAAAOABEAAAAAAAcAAAAOABIAAAABAAkAAAAGAAQAAAAAAAkAAAAGAAQAAAD//wkAAAAGAAQAAAD+/wkAAAAGAAQAAAD9/wkAAAAGAAQAAAD8/wkAAAAGAAQAAAD7/wkAAAAGAAQAAAABAAgAAAAGAAQAAAAAAAgAAAAGAAQAAAD//wgAAAAGAAQAAAD+/wgAAAAGAAQAAAD9/wgAAAAGAAQAAAD8/wgAAAAGAAQAAAD7/wgAAAAGAAQAAAD9/wEAAAAGAAQAAAD9/wIAAAAGAAQAAAD9/wMAAAAGAAQAAAD9/wQAAAAGAAQAAAD9/wUAAAAGAAQAAAD9/wYAAAAGAAQAAAD+/wYAAAAHAAQAAAD9/wcAAAAGAAQAAAD8/wcAAAAGAAQAAAD7/wcAAAAGAAQAAAD8/wYAAAAGAAQAAAD8/wUAAAAGAAQAAAD8/wQAAAAGAAQAAAD7/wMAAAAGAAQAAAD7/wIAAAAGAAQAAAD7/wEAAAAGAAQAAAD8/wEAAAAGAAQAAAD8/wIAAAAGAAQAAAD8/wMAAAAGAAQAAAD7/wQAAAAGAAQAAAD7/wUAAAAGAAQAAAD7/wYAAAAGAAQAAAD9/wAAAAAGAAQAAAD8/wAAAAAGAAQAAAD7/wAAAAAGAAQAAAD9////AAAGAAQAAAD8////AAAGAAQAAAD7////AAAGAAQAAAD+/wAAAAAHAAQAAAD+/wEAAAAHAAQAAAD+/wIAAAAHAAQAAAD+/wMAAAAHAAQAAAD+/wQAAAAHAAQAAAD+/wUAAAAHAAQAAAD+/wcAAAAMABIAAAD//wcAAAAOABIAAAD+////AAAMAA0AAAD4////AAAGAAQAAAD4/wAAAAAGAAQAAAD4/wEAAAAGAAQAAAD4/wIAAAAGAAQAAAD4/wMAAAAGAAQAAAD4/wQAAAAGAAQAAAD4/wUAAAAGAAQAAAD4/wYAAAAGAAQAAAD4/wcAAAAGAAQAAAD4/wgAAAAGAAQAAAD4/wkAAAAGAAQAAAD5////AAAGAAQAAAD5/wAAAAAGAAQAAAD5/wEAAAAGAAQAAAD5/wIAAAAGAAQAAAD5/wMAAAAGAAQAAAD5/wQAAAAGAAQAAAD5/wUAAAAGAAQAAAD5/wYAAAAGAAQAAAD5/wcAAAAGAAQAAAD5/wgAAAAGAAQAAAD5/wkAAAAGAAQAAAD6////AAAGAAQAAAD6/wAAAAAGAAQAAAD6/wEAAAAGAAQAAAD6/wIAAAAGAAQAAAD6/wMAAAAGAAQAAAD6/wQAAAAGAAQAAAD6/wUAAAAGAAQAAAD6/wYAAAAGAAQAAAD6/wcAAAAGAAQAAAD6/wgAAAAGAAQAAAD6/wkAAAAGAAQAAAATAAEAAAANAAIAAAAhAAcAAAANAAIAAAAlAAQAAAAKAAIAAAAlAAUAAAAKAAMAAAAmAAQAAAAGAAIAAAAmAAUAAAAGAAYAAAAnAAQAAAALAAIAAAAnAAUAAAALAAMAAAD3////AAAGAAQAAAD3/wAAAAAGAAQAAAD3/wEAAAAGAAQAAAD3/wIAAAAGAAQAAAD3/wMAAAAGAAQAAAD3/wQAAAAGAAQAAAD3/wUAAAAGAAQAAAD3/wYAAAAGAAQAAAD3/wcAAAAGAAQAAAD3/wgAAAAGAAQAAAD3/wkAAAAGAAQAAAD2/wkAAAAGAAQAAAD2/wgAAAAGAAQAAAD2/wcAAAAGAAQAAAD2/wYAAAAGAAQAAAD2/wUAAAAGAAQAAAD2/wQAAAAGAAQAAAD2/wMAAAAGAAQAAAD2/wIAAAAGAAQAAAD2/wEAAAAGAAQAAAD2/wAAAAAGAAQAAAD2////AAAGAAQAAAAGAAoAAAAGAAQAAAAHAAoAAAAHAAQAAAAIAAoAAAAIAAQAAAAFAAoAAAAGAAQAAAAEAAoAAAAGAAQAAAADAAoAAAAGAAQAAAACAAoAAAAGAAQAAAABAAoAAAAGAAQAAAAAAAoAAAAGAAQAAAD//woAAAAGAAQAAAD+/woAAAAGAAQAAAD9/woAAAAGAAQAAAD8/woAAAAGAAQAAAD7/woAAAAGAAQAAAD6/woAAAAGAAQAAAD5/woAAAAGAAQAAAD4/woAAAAGAAQAAAD3/woAAAAGAAQAAAD2/woAAAAGAAQAAAAZAAEAAAANAAIAAAABAAAAAAAGAAYAAAACAAAAAAAGAAYAAAADAAAAAAAGAAYAAAAEAAAAAAAGAAYAAAAFAAAAAAAGAAYAAAAHAAAAAAAGAAYAAAAGAAAAAAAGAAYAAAAIAAAAAAAIAAYAAAAIAP//AAAIAAUAAAAHAP//AAAHAAUAAAAGAP//AAAGAAUAAAAFAP//AAAGAAUAAAAEAP//AAAGAAUAAAADAP//AAAGAAUAAAACAP//AAAGAAUAAAABAP//AAAGAAUAAAAVAAYAAAAKAAIAAAAVAAcAAAAKAAMAAAAWAAYAAAAMAAgAAAAWAAcAAAAMAAkAAAAXAAYAAAANAAgAAAAXAAcAAAANAAkAAAAbAAUAAAAKAAIAAAAcAAUAAAAGAAIAAAAdAAUAAAALAAIAAAAbAAYAAAAKAAMAAAAcAAYAAAAGAAYAAAAdAAYAAAALAAMAAAA=")
+tile_set = ExtResource("3_jyne3")
+
+[node name="LevelTrigger" parent="." instance=ExtResource("2_x8td2")]
+
+[node name="DeathZone" parent="." instance=ExtResource("3_si3di")]
+
+[node name="ShopsArea" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShopsArea"]
+position = Vector2(272, 228)
+shape = SubResource("RectangleShape2D_rkqoq")
+
+[node name="LevelGrettTrigger" parent="." instance=ExtResource("10_pm1v2")]
+position = Vector2(640, 232)
+metadata/LevelIndex = -1
+metadata/Author = &"San4hi"
+metadata/Requires = "Уметь читать"

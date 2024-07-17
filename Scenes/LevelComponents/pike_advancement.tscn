@@ -1,0 +1,221 @@
+[gd_scene load_steps=8 format=3 uid="uid://xuw0yy1jvh11"]
+
+[ext_resource type="Texture2D" uid="uid://cf7mrxbfur7oe" path="res://Assets/pike.png" id="1_wwwo2"]
+[ext_resource type="Texture2D" uid="uid://dvbeoupjdxjnn" path="res://Assets/pike_tree.png" id="2_j2r4l"]
+[ext_resource type="Script" path="res://Scripts/pike_advancement.gd" id="3_d5iif"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ytxww"]
+radius = 4.0
+height = 176.0
+
+[sub_resource type="Animation" id="Animation_2gk8b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pike:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PikeTree:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PikeTree2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 48)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PikeTree3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 84.173)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PikeTree4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 122.667)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 56)]
+}
+
+[sub_resource type="Animation" id="Animation_abevl"]
+resource_name = "pike_advancement"
+length = 6.0
+loop_mode = 1
+capture_included = true
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pike:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.999),
+"transitions": PackedFloat32Array(1, 1),
+"update": 2,
+"values": [Vector2(0, -16), Vector2(0, -114)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PikeTree:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.999),
+"transitions": PackedFloat32Array(1, 1),
+"update": 2,
+"values": [Vector2(0, 16), Vector2(0, -82)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PikeTree2:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.985314),
+"transitions": PackedFloat32Array(1, 1),
+"update": 2,
+"values": [Vector2(0, 48), Vector2(0, -50)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PikeTree3:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.985314),
+"transitions": PackedFloat32Array(1, 1),
+"update": 2,
+"values": [Vector2(0, 84.173), Vector2(0, -13.827)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 2,
+"values": [Vector2(0, 56), Vector2(0, -42.6667)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PikeTree4:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 2,
+"values": [Vector2(0, 122.667), Vector2(0, 24)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qjqfb"]
+_data = {
+"RESET": SubResource("Animation_2gk8b"),
+"pike_advancement": SubResource("Animation_abevl")
+}
+
+[node name="Pike" type="Area2D" groups=["DeathTile"]]
+scale = Vector2(3, 3)
+collision_layer = 2
+collision_mask = 2
+metadata/Speed = 4
+metadata/StartCD = 0.0
+
+[node name="Pike" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -16)
+texture = ExtResource("1_wwwo2")
+
+[node name="PikeTree" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 16)
+texture = ExtResource("2_j2r4l")
+
+[node name="PikeTree2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 48)
+texture = ExtResource("2_j2r4l")
+
+[node name="PikeTree3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 84.173)
+scale = Vector2(1, 1.26081)
+texture = ExtResource("2_j2r4l")
+
+[node name="PikeTree4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 122.667)
+scale = Vector2(1, 1.26081)
+texture = ExtResource("2_j2r4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 56)
+shape = SubResource("CapsuleShape2D_ytxww")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." node_paths=PackedStringArray("start_cd_timer")]
+active = false
+libraries = {
+"": SubResource("AnimationLibrary_qjqfb")
+}
+autoplay = "pike_advancement"
+speed_scale = 4.0
+script = ExtResource("3_d5iif")
+start_cd_timer = NodePath("../StartCDTimer")
+
+[node name="StartCDTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="StartCDTimer" to="AnimationPlayer" method="_on_start_cd_timer_timeout"]

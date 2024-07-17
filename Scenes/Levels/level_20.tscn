@@ -1,0 +1,157 @@
+[gd_scene load_steps=9 format=4 uid="uid://fq8xhdrp76mq"]
+
+[ext_resource type="PackedScene" uid="uid://dk60lofqc6ac2" path="res://Scenes/LevelComponents/branch.tscn" id="1_h0ewv"]
+[ext_resource type="PackedScene" uid="uid://wrk5haucvpd3" path="res://Scenes/LevelComponents/base_liana.tscn" id="2_3jovt"]
+[ext_resource type="PackedScene" uid="uid://c3etaeahnu01e" path="res://Scenes/LevelComponents/spike.tscn" id="3_vpe5p"]
+[ext_resource type="PackedScene" uid="uid://drisv2et2gx2b" path="res://Scenes/LevelComponents/branch_to_tail.tscn" id="4_c4b18"]
+[ext_resource type="TileSet" uid="uid://c61rnxu8kpabt" path="res://Assets/Resources/terrain_tile_set.tres" id="5_fljsw"]
+[ext_resource type="PackedScene" uid="uid://237d615sc1ow" path="res://Scenes/LevelComponents/level_trig.tscn" id="6_qyhu3"]
+[ext_resource type="PackedScene" uid="uid://bsv7slea70n2b" path="res://Scenes/LevelComponents/death_zone.tscn" id="7_w3ku6"]
+[ext_resource type="PackedScene" uid="uid://d04slth11j84w" path="res://Scenes/LevelComponents/level_grett_trigger.tscn" id="8_cddbg"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Branches" type="Node2D" parent="."]
+
+[node name="Branch" parent="Branches" instance=ExtResource("1_h0ewv")]
+position = Vector2(608, 32)
+rotation = 1.5708
+scale = Vector2(4.93462, 3.0532)
+
+[node name="Branch7" parent="Branches" instance=ExtResource("1_h0ewv")]
+position = Vector2(64, 160)
+scale = Vector2(2.21462, 3.0532)
+
+[node name="Branch2" parent="Branches" instance=ExtResource("1_h0ewv")]
+position = Vector2(864, 32)
+rotation = 1.5708
+scale = Vector2(4.93462, 3.0532)
+
+[node name="Branch3" parent="Branches" instance=ExtResource("1_h0ewv")]
+position = Vector2(1568, 424)
+rotation = 1.5708
+scale = Vector2(2.73462, 3.0532)
+
+[node name="Branch4" parent="Branches" instance=ExtResource("1_h0ewv")]
+position = Vector2(1824, 424)
+rotation = 1.5708
+scale = Vector2(2.73462, 3.0532)
+
+[node name="Branch5" parent="Branches" instance=ExtResource("1_h0ewv")]
+position = Vector2(2080, 424)
+rotation = 1.5708
+scale = Vector2(2.73462, 3.0532)
+
+[node name="Liana" type="Node2D" parent="Branches"]
+position = Vector2(2192, 288)
+rotation = 3.14159
+metadata/_edit_group_ = true
+
+[node name="BaseLiana" parent="Branches/Liana" instance=ExtResource("2_3jovt")]
+scale = Vector2(3.97726, 2)
+
+[node name="Spikes" type="Node2D" parent="."]
+
+[node name="Spikes" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(1176, 496)
+
+[node name="Spikes2" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(1448, 496)
+
+[node name="Spikes3" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(1504, 496)
+
+[node name="Spikes4" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(1568, 496)
+
+[node name="Spikes5" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(1632, 496)
+
+[node name="Spikes6" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(1696, 496)
+
+[node name="Spikes7" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(1760, 496)
+
+[node name="Spikes8" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(1824, 496)
+
+[node name="Spikes9" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(1888, 496)
+
+[node name="Spikes10" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(1952, 496)
+
+[node name="Spikes11" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(2016, 496)
+
+[node name="Spikes12" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(2080, 496)
+
+[node name="Spikes13" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(2144, 496)
+
+[node name="Spikes14" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(1120, 496)
+
+[node name="Spikes15" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(1056, 496)
+
+[node name="Spikes16" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(992, 496)
+
+[node name="Spikes17" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(928, 496)
+
+[node name="Spikes18" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(864, 496)
+
+[node name="Spikes19" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(800, 496)
+
+[node name="Spikes20" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(736, 496)
+
+[node name="Spikes21" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(672, 496)
+
+[node name="Spikes22" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(608, 496)
+
+[node name="Spikes23" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(544, 496)
+
+[node name="Spikes24" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(480, 496)
+
+[node name="Spikes25" parent="Spikes" instance=ExtResource("3_vpe5p")]
+position = Vector2(416, 496)
+
+[node name="HookBranches" type="Node2D" parent="."]
+scale = Vector2(4, 4)
+
+[node name="BranchToTail2" parent="HookBranches" instance=ExtResource("4_c4b18")]
+position = Vector2(328, 22)
+rotation = 3.14159
+
+[node name="EarthTiles" type="TileMapLayer" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("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AAAZAAoAAAAGAAQAAAAYAAoAAAAGAAQAAAAXAAoAAAAGAAQAAAAWAAoAAAAGAAQAAAAVAAoAAAAGAAQAAAAUAAoAAAAGAAQAAAATAAoAAAAGAAQAAAASAAoAAAAGAAQAAAARAAoAAAAGAAQAAAAQAAoAAAAGAAQAAAAPAAoAAAAGAAQAAAAOAAoAAAAGAAQAAAANAAoAAAAGAAQAAAAMAAoAAAAGAAQAAAALAAoAAAAGAAQAAAAKAAoAAAAGAAQAAAAJAAoAAAAGAAQAAAAIAAoAAAAGAAQAAAAHAAoAAAAGAAQAAAAGAAoAAAAGAAQAAAAFAAoAAAAGAAQAAAACAAIAAAAEAAIAAAADAAIAAAAFAAIAAAAEAAIAAAAHAAIAAAAFAAIAAAAIAAIAAAACAP//AAAPAAYAAAAJAP//AAAPAAUAAAAJAP3/AAAPAAIAAAAJAP7/AAAPAAMAAAANAP3/AAAPAAIAAAANAP7/AAAPAAMAAAANAP//AAAPAAUAAAAUAP3/AAAPAAIAAAAUAP7/AAAPAAMAAAAUAP//AAAPAAUAAAACAPz/AAAPAAIAAAACAP3/AAAPAAMAAAACAP7/AAAPAAUAAAACAAMAAAAEAAMAAAADAAMAAAAFAAMAAAAEAAMAAAAHAAMAAAAFAAMAAAAIAAMAAAACAAQAAAAEAAQAAAADAAQAAAAFAAQAAAACAAUAAAAEAAQAAAADAAUAAAAFAAQAAAACAAYAAAAEAAQAAAADAAYAAAAFAAQAAAACAAcAAAAEAAQAAAADAAcAAAAFAAQAAAAEAAQAAAAHAAQAAAAFAAQAAAAIAAQAAAAEAAUAAAAHAAQAAAAFAAUAAAAIAAQAAAAEAAYAAAAHAAQAAAAFAAYAAAAIAAQAAAAEAAcAAAAHAAQAAAAFAAcAAAAIAAQAAAA=")
+tile_set = ExtResource("5_fljsw")
+
+[node name="BackTiles" type="TileMapLayer" parent="."]
+z_index = -1
+texture_filter = 1
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAATAP//AAAWAA4AAAAUAP//AAAXAA4AAAAVAP//AAAYAA4AAAATAAAAAAAWAA4AAAAUAAAAAAAXAA4AAAAVAAAAAAAYAA4AAAATAAEAAAAWAA4AAAAUAAEAAAAXAA4AAAAVAAEAAAAYAA4AAAATAAIAAAAWAA4AAAAUAAIAAAAXAA4AAAAVAAIAAAAYAA4AAAATAAMAAAAWAA4AAAAUAAMAAAAXAA4AAAAVAAMAAAAYAA4AAAATAAQAAAAWAA4AAAAUAAQAAAAXAA4AAAAVAAQAAAAYAA4AAAATAAUAAAAWAA4AAAAUAAUAAAAXAA4AAAAVAAUAAAAYAA4AAAATAAYAAAAWAA4AAAAUAAYAAAAXAA4AAAAVAAYAAAAYAA4AAAATAAcAAAAWAA4AAAAUAAcAAAAXAA4AAAAVAAcAAAAYAA4AAAATAAgAAAAWAA4AAAAUAAgAAAAXAA4AAAAVAAgAAAAYAA4AAAAKAAAAAAAWAA4AAAALAAAAAAAXAA4AAAAMAAAAAAAYAA4AAAAKAAEAAAAWAA4AAAALAAEAAAAXAA4AAAAMAAEAAAAYAA4AAAAKAAIAAAAWAA4AAAALAAIAAAAXAA4AAAAMAAIAAAAYAA4AAAAKAAMAAAAWAA4AAAALAAMAAAAXAA4AAAAMAAMAAAAYAA4AAAAKAAQAAAAWAA4AAAALAAQAAAAXAA4AAAAMAAQAAAAYAA4AAAAKAAUAAAAWAA4AAAALAAUAAAAXAA4AAAAMAAUAAAAYAA4AAAAKAAYAAAAWAA4AAAALAAYAAAAXAA4AAAAMAAYAAAAYAA4AAAAKAAcAAAAWAA4AAAALAAcAAAAXAA4AAAAMAAcAAAAYAA4AAAAKAAgAAAAWAA4AAAALAAgAAAAXAA4AAAAMAAgAAAAYAA4AAAAKAP//AAAWAA4AAAALAP//AAAXAA4AAAAMAP//AAAYAA4AAAA=")
+tile_set = ExtResource("5_fljsw")
+
+[node name="LevelTrigger" parent="." instance=ExtResource("6_qyhu3")]
+
+[node name="DeathZone" parent="." instance=ExtResource("7_w3ku6")]
+
+[node name="LevelGrettTrigger" parent="." instance=ExtResource("8_cddbg")]
+metadata/LevelIndex = 20
+metadata/Author = &"San4hi"
+metadata/Requires = "Крепкий хвост и пачка чипсов"

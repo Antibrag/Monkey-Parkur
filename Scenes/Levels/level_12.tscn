@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=4 uid="uid://brjg7f387nfxa"]
+
+[ext_resource type="PackedScene" uid="uid://dk60lofqc6ac2" path="res://Scenes/LevelComponents/branch.tscn" id="1_37ykn"]
+[ext_resource type="PackedScene" uid="uid://c3etaeahnu01e" path="res://Scenes/LevelComponents/spike.tscn" id="2_s613u"]
+[ext_resource type="PackedScene" uid="uid://drisv2et2gx2b" path="res://Scenes/LevelComponents/branch_to_tail.tscn" id="3_1lfso"]
+[ext_resource type="TileSet" uid="uid://c61rnxu8kpabt" path="res://Assets/Resources/terrain_tile_set.tres" id="4_thnrg"]
+[ext_resource type="PackedScene" uid="uid://237d615sc1ow" path="res://Scenes/LevelComponents/level_trig.tscn" id="5_1t6d4"]
+[ext_resource type="PackedScene" uid="uid://bsv7slea70n2b" path="res://Scenes/LevelComponents/death_zone.tscn" id="6_nyngu"]
+[ext_resource type="PackedScene" uid="uid://d04slth11j84w" path="res://Scenes/LevelComponents/level_grett_trigger.tscn" id="7_oy3qk"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Branches" type="Node2D" parent="."]
+
+[node name="Branch" parent="Branches" instance=ExtResource("1_37ykn")]
+position = Vector2(992, 160)
+rotation = 1.5708
+scale = Vector2(10.9346, 3.0532)
+
+[node name="Branch2" parent="Branches" instance=ExtResource("1_37ykn")]
+position = Vector2(800, 1.52588e-05)
+rotation = 1.5708
+scale = Vector2(10.9346, 3.0532)
+
+[node name="Branch3" parent="Branches" instance=ExtResource("1_37ykn")]
+position = Vector2(2208, 256)
+rotation = 1.5708
+scale = Vector2(4.45462, 3.0532)
+
+[node name="Spikes" type="Node2D" parent="."]
+
+[node name="Spikes" parent="Spikes" instance=ExtResource("2_s613u")]
+position = Vector2(1088, 112)
+
+[node name="HookBranches" type="Node2D" parent="."]
+scale = Vector2(4, 4)
+
+[node name="BranchToTail" parent="HookBranches" instance=ExtResource("3_1lfso")]
+position = Vector2(110, 96)
+rotation = -2.61799
+
+[node name="BranchToTail3" parent="HookBranches" instance=ExtResource("3_1lfso")]
+position = Vector2(200, 102)
+rotation = -3.14159
+
+[node name="BranchToTail2" parent="HookBranches" instance=ExtResource("3_1lfso")]
+position = Vector2(456, 38)
+rotation = -3.14159
+
+[node name="EarthTiles" type="TileMapLayer" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAHAAQAAAAKAAoAAAAHAAUAAAAKAAsAAAAIAAQAAAALAAoAAAAIAAUAAAALAAsAAAAHAAMAAAAKAAoAAAAIAAMAAAALAAoAAAAHAAIAAAAKAAoAAAAIAAIAAAALAAoAAAAHAAEAAAAKAAoAAAAIAAEAAAALAAoAAAAHAAAAAAAKAAoAAAAIAAAAAAALAAoAAAAMAAUAAAANAAIAAAAPAAIAAAANAAQAAAAQAAIAAAAWAAkAAAAQAAMAAAAIAAkAAAARAAIAAAAZAAMAAAARAAMAAAAJAAkAAAASAAIAAAAJAAgAAAASAAMAAAAJAAkAAAATAAIAAAAJAAgAAAATAAMAAAAJAAkAAAAUAAIAAAAJAAgAAAAUAAMAAAAJAAkAAAARAAEAAAAPAAIAAAAPAP//AAAOAA4AAAAQAP//AAAOAA4AAAARAP//AAAOAA4AAAASAP//AAAOAA4AAAATAP//AAAGAAYAAAAUAP//AAAOAA4AAAAVAP//AAAOAA4AAAATAAAAAAAPAAYAAAAVAAIAAAANAAgAAAAVAAMAAAANAAkAAAAcAAEAAAAFAAYAAAAfAAYAAAAIAAgAAAAfAAcAAAAIAAkAAAAgAAYAAAAJAAgAAAAgAAcAAAAJAAkAAAAhAAYAAAAMAAgAAAAhAAcAAAAMAAkAAAAiAAYAAAANAAgAAAAiAAcAAAANAAkAAAACAAUAAAANAAIAAAAlAAQAAAAKAAIAAAAlAAUAAAAKAAMAAAAmAAQAAAALAAIAAAAmAAUAAAALAAMAAAAIAP//AAANAA4AAAAJAP//AAAOAA4AAAAKAP//AAAOAA4AAAALAP//AAAOAA4AAAAMAP//AAAOAA4AAAANAP//AAAOAA4AAAAOAP//AAAOAA4AAAAWAP//AAAOAA4AAAAXAP//AAAOAA4AAAAYAP//AAAOAA4AAAAZAP//AAAOAA4AAAAaAP//AAAOAA4AAAAbAP//AAAQAA4AAAAbAAAAAAAQABAAAAAbAAEAAAAEAAYAAAAdAAEAAAAIAAYAAAAdAAAAAAAIAAQAAAAdAP//AAAIAAQAAAAcAAAAAAAFAAkAAAAcAP//AAAFAAkAAAAHAP//AAAEAAQAAAA=")
+tile_set = ExtResource("4_thnrg")
+
+[node name="LevelTrigger" parent="." instance=ExtResource("5_1t6d4")]
+
+[node name="DeathZone" parent="." instance=ExtResource("6_nyngu")]
+
+[node name="LevelGrettTrigger" parent="." instance=ExtResource("7_oy3qk")]
+metadata/LevelIndex = 12
+metadata/Author = &"San4hi"
+metadata/Requires = "Крепкий хвост и водительские права (скрин мне на почту)"

@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://drimllm05qp20"]
+
+[ext_resource type="Texture2D" uid="uid://cacly8en3t4fg" path="res://Assets/ShopIcons/tail_product_ico.png" id="1_k5xas"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3ppww"]
+line_spacing = 0.0
+font_size = 11
+
+[node name="ShopProduct" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.056
+anchor_bottom = 0.086
+offset_right = -0.512001
+offset_bottom = 0.271999
+texture = ExtResource("1_k5xas")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.086
+anchor_right = 0.056
+anchor_bottom = 0.16
+offset_top = 0.271999
+offset_right = -0.512001
+offset_bottom = 0.319992
+text = "Крепкий
+[djcn"
+label_settings = SubResource("LabelSettings_3ppww")
+horizontal_alignment = 1
+clip_text = true
+
+[node name="BuyButton" type="Button" parent="Name"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 48.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+text = "200"
