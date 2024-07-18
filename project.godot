@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Monkey Parkur"
+config/version="1.1"
 run/main_scene="res://Scenes/main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/show_image=false
@@ -85,6 +86,7 @@ dash={
 
 [internationalization]
 
+locale/translations=PackedStringArray("res://lang.en.translation", "res://lang.es.translation", "res://lang.ru.translation")
 locale/locale_filter_mode=0
 
 [layer_names]
