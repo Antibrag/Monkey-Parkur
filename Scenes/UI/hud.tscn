@@ -52,7 +52,7 @@ offset_left = 16.0
 offset_top = 8.0
 offset_right = 329.0
 offset_bottom = 40.0
-text = "Пройденное расстояние: "
+text = "DISTANCE"
 label_settings = SubResource("LabelSettings_j1rle")
 
 [node name="MaxDistanceLabel" type="Label" parent="."]
@@ -60,7 +60,7 @@ offset_left = 16.0
 offset_top = 40.0
 offset_right = 329.0
 offset_bottom = 64.0
-text = "Лучший результат: "
+text = "MAX_DISTANCE"
 label_settings = SubResource("LabelSettings_uuea3")
 
 [node name="BananaLabel" type="Label" parent="."]
@@ -126,7 +126,6 @@ autowrap_mode = 3
 clip_text = true
 
 [node name="Shops" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -188,7 +187,7 @@ anchors_preset = -1
 anchor_top = -0.062
 anchor_right = 1.0
 offset_top = -0.191999
-text = "Магазин скинов"
+text = "SHP_SKINS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -253,7 +252,7 @@ anchors_preset = -1
 anchor_top = -0.062
 anchor_right = 1.0
 offset_top = -0.191999
-text = "Магазин улучшений"
+text = "SHP_UPGRADES"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -310,6 +309,7 @@ text = "Рубинов: "
 label_settings = SubResource("LabelSettings_gwphp")
 
 [node name="DeathMenu" type="VBoxContainer" parent="." node_paths=PackedStringArray("death_background")]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -326,7 +326,7 @@ death_background = NodePath("../DeathBackground")
 
 [node name="DeathLabel" type="Label" parent="DeathMenu"]
 layout_mode = 2
-text = "Вы мертвы"
+text = "DEATH"
 label_settings = SubResource("LabelSettings_rjfng")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -354,7 +354,7 @@ language = "ru_RU"
 
 [node name="AdRespawnButton" type="Button" parent="DeathMenu"]
 layout_mode = 2
-text = "Возродиться за рубин"
+text = "RESPAWN"
 language = "ru_RU"
 
 [node name="Space2" type="Label" parent="DeathMenu"]
@@ -366,7 +366,7 @@ language = "ru_RU"
 
 [node name="RestartButton" type="Button" parent="DeathMenu"]
 layout_mode = 2
-text = "Начать сначала"
+text = "RESTART"
 language = "ru_RU"
 
 [node name="Note" type="Label" parent="DeathMenu"]
