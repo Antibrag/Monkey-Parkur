@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://vsvuaiucqqus"]
+[gd_scene load_steps=8 format=4 uid="uid://vsvuaiucqqus"]
 
 [ext_resource type="PackedScene" uid="uid://xuw0yy1jvh11" path="res://Scenes/LevelComponents/pike_advancement.tscn" id="1_3ojqd"]
 [ext_resource type="PackedScene" uid="uid://dk60lofqc6ac2" path="res://Scenes/LevelComponents/branch.tscn" id="2_cl7xj"]
 [ext_resource type="PackedScene" uid="uid://d04slth11j84w" path="res://Scenes/LevelComponents/level_grett_trigger.tscn" id="3_hmtnj"]
+[ext_resource type="PackedScene" uid="uid://c3etaeahnu01e" path="res://Scenes/LevelComponents/spike.tscn" id="3_ynlvn"]
 [ext_resource type="TileSet" uid="uid://c61rnxu8kpabt" path="res://Assets/Resources/terrain_tile_set.tres" id="5_olxap"]
 [ext_resource type="PackedScene" uid="uid://237d615sc1ow" path="res://Scenes/LevelComponents/level_trig.tscn" id="6_ymr81"]
 [ext_resource type="PackedScene" uid="uid://bsv7slea70n2b" path="res://Scenes/LevelComponents/death_zone.tscn" id="7_adxtq"]
@@ -74,6 +75,54 @@ position = Vector2(2192, 288)
 scale = Vector2(3.97461, 3.0532)
 
 [node name="Spikes" type="Node2D" parent="."]
+
+[node name="Spikes" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(488, 624)
+
+[node name="Spikes2" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(552, 560)
+
+[node name="Spikes3" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(664, 560)
+
+[node name="Spikes4" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(728, 624)
+
+[node name="Spikes5" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(1000, 624)
+
+[node name="Spikes6" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(1064, 560)
+
+[node name="Spikes7" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(1176, 560)
+
+[node name="Spikes8" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(1240, 624)
+
+[node name="Spikes9" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(1512, 624)
+
+[node name="Spikes10" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(1576, 560)
+
+[node name="Spikes11" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(1688, 560)
+
+[node name="Spikes12" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(1752, 624)
+
+[node name="Spikes13" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(2024, 624)
+
+[node name="Spikes14" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(2088, 560)
+
+[node name="Spikes15" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(2200, 560)
+
+[node name="Spikes16" parent="Spikes" instance=ExtResource("3_ynlvn")]
+position = Vector2(2264, 624)
 
 [node name="EarthTiles" type="TileMapLayer" parent="."]
 texture_filter = 1
