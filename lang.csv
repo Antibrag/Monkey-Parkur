@@ -1,0 +1,64 @@
+keys,en,es,ru
+DISTANCE,Distance,Distancia,Расстояние
+MAX_DISTANCE,Best result,Mejor distancia,Лучшее расстояние
+BANANAS,Banana,Plátanos,Бананов
+RUBINS,Ruby,Rubinov,Рубинов
+PT_JUMP,Jump -,Rebotar -,Прыжок -
+PT_MOVING,Moving -,Moviente -,Перемещение -
+PT_TAKE_BRANCH,Take branch -,Consigue un palo -,Взять палку -
+PT_LET_GO_BRANCH,Let go branch -,Suelta el palo -,Отпустить палку -
+PT_JUMP_FROM_BRANCH,Jump from branch -,Saltar del palo -,Прыгнуть с палки -
+PT_JUMP_FROM_BRANCH_TO_DIR,Jump from branch in the direction -,Salta del palo en dirección a -,Прыгнуть с палки в направлении -
+PT_LET_GO_TAIL,Let go tail -,Suelta la cola -,Отпустить хвост -
+PT_JUMP_FROM_TAIL,Jump from tail -,Saltar de la cola -,Прыгнуть с хвоста -
+DEATH,YOUR DIED,ESTÁS MUERTO,ВЫ МЕРТВЫ
+DEATH_SCORE,Your distance,Distancia recorrida,Пройденное расстояние
+RESPAWN,Respawn for the ruby,Renacimiento del rubí,Возродиться за рубин
+RESTART,Restart,Reinicie,Перезапустить
+PT_DEATH,"After restarting, your distance traveled will be converted into bananas, and every 50 meters into 1 ruby","Al reiniciar, tu distancia recorrida se convertirá en plátanos y cada 50 metros en un rubí","После рестарта ваше пройденное расстояние будет конвертировано в бананы, а каждые 50 метров в рубин"
+PT_SKINS,Double click on the skin to buy and select it (if it is already purchased),Haz doble clic en una skin para comprarla o seleccionarla (si ya está comprada),"Нажмите два раза по скину, чтобы купить или выбрать его (если он уже куплен)"
+PT_UPGRADES,"Double click on the upgrade to purchase it. After purchasing the upgrade, the next level will be - training","Pulsa dos veces sobre una mejora para comprarla. Después de comprar una mejora, el siguiente nivel será un nivel tutorial","Нажмите два раза по улучшению, чтобы купить его. После покупки улучшения следующий уровень будет - обучающим"
+TAIL,Strong tail,Aguardiente fuerte.,Крепкий хвост
+DASH,Dash,Jerk,Рывок
+SK_STANDART,Standart,Estándar,Стандартный
+SK_BLACK,Blackish,Negruzco,Черныш
+SK_SHADOW,Shadow,Sombra,Тень
+SK_DEVIL,Devil,Diablo,Дьявол
+SK_CYBORG,Cyborg,Cyborg,Киборг
+LEVEL_NAME,Level,Nivel,Уровень
+LEVEL_AUTHOR,Author,Autor,Автор
+LEVEL_REQUIRED,Required,Requerido,Требуется
+PT_LEVEL_1,"Well, you must be able to jump and grab sticks.","Bueno, debes ser capaz de saltar y agarrar palos.","Ну, прыгать наверное уметь и палки хватать"
+PT_LEVEL_2,Ultra gaming mouse,Ratón,Мышка
+PT_LEVEL_3,W button ,Botón W ,Кнопка W 
+PT_LEVEL_4,Reaction?,¿Reacción?,Реакция?
+PT_LEVEL_5,A little bit of ingenuity,Un poco de ingenio,Чуть-чуть смекалки
+PT_LEVEL_6,Timings,Horarios,Тайминги
+PT_LEVEL_7,Timings again,Tiempos de nuevo,Снова тайминги
+PT_LEVEL_8,Wit and luck,Ingenio y suerte,Смекалка и удача
+PT_LEVEL_9,Nerves of steel,Nervios de acero,Стальные нервы
+PT_LEVEL_10,Vision and hands,Visión y manos,Зрение и руки
+PT_LEVEL_11,Strong tail and everything,Aguardiente fuerte y todo lo demás,Крепкий хвост и все остальное
+PT_LEVEL_12,Strong tail and a driver's licence,Aguardiente fuerte y un permiso de conducir,Крепкий хвост и водительские права (скрин мне на почту)
+PT_LEVEL_13,Strong tail and be able to wait,Aguardiente fuerte y poder esperar,Крепкий хвост и уметь ждать
+PT_LEVEL_14,Strong tail and step back,Aguardiente fuerte y dar un paso atrás,Крепкий хвост и шаг назад
+PT_LEVEL_15,Strong tail and the ability to fly (even though you're a monkey),Aguardiente fuerte y la capacidad de volar (aunque seas un mono),Крепкий хвост и умение летать (хоть вы и обезяна)
+PT_LEVEL_16,Strong tail,Aguardiente fuerte,Крепкий хвост
+PT_LEVEL_17,Strong tail and the ability to understand the mechanics of dota,Aguardiente fuerte y la capacidad de comprender la mecánica de dota,Крпекий хвост и умение разбираться в механиках доты
+PT_LEVEL_18,"Strong tail and since this is level made by Archi, so good luck","Aguardiente fuerte y como este es el nivel de Archi, buena suerte con eso","Крепкий хвост и, т.к. это уровень Арчи, то ОГРОМНОЙ удачи"
+PT_LEVEL_19,Strong tail and the ability to live upside down,Aguardiente fuerte y la capacidad de vivir al revés,Крепкий хвост и умение жить вверх ногами
+PT_LEVEL_20,Strong tail and a packet of crisps,Aguardiente fuerte y un paquete de patatas fritas,Крепкий хвост и пачка чипсов
+PT_LEVEL_21,"Strong tail and... Idk, make up your own mind","Aguardiente fuerte y... No sé, decídete","Крепкий хвост и... хз, придумайте сами"
+PT_LEVEL_22,"Strong tail, dash and finger coordination on the keyboard","Aguardiente fuerte, jerk y coordinación de los dedos en el teclado","Крепкий хвост, рывок и координация пальцев на клавиатуре"
+PT_LEVEL_23,"Dash and ingenuity (optional, you can fly over the top)","Jerk e ingenio (opcional, puedes volar por encima)","Рывок и смекалка (опционально, сверху можно пролететь)"
+PT_LEVEL_24,"Strong tail, dash and a sense of humour that the author doesn't have","Aguardiente fuerte, jerk y un sentido del humor que el autor no tiene","Крепкий хвост, рывок и чувство юмора, которого нету у автора"
+PT_LEVEL_25,Dash and two packets of crisps,Jerk y dos paquetes de patatas fritas,Рывок и 2 пачки чипсов
+PT_LEVEL_26,Dash and the totem of immortality,Jerk y el tótem de la inmortalidad,Рывок и тотем бессмертия
+PT_LEVEL_27,"Strong tail, dash and quick hands","Aguardiente fuerte, jerk y manos rápidas","Крепкий хвост, рывок и быстрые руки"
+PT_LEVEL_ST,Be able to read,Ser capaz de leer,Уметь читать
+METRES,m,m,м
+COUNT,cnt.,cnt.,шт.
+UPGRADES,Upgrades,Mejoras,Улучшения
+SKINS,Skins,Pieles,Скины
+SHP_UPGRADES,Upgrades shop,Actualizar la tienda,Магазин улучшений
+SHP_SKINS,Skins shop,Tienda de piel,Магазин скинов
