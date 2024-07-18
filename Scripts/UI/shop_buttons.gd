@@ -3,8 +3,8 @@ extends VSplitContainer
 @onready var upgrades_shop_button: Button = $UpgradesShop
 @onready var skins_shop_button: Button = $SkinsShop
 
-const UPGRADES_BUTTON_TEXT: String = "Улучшения"
-const SKINS_BUTTON_TEXT: String = "Скины"
+var UPGRADES_BUTTON_TEXT: String = tr("UPGRADES")
+var SKINS_BUTTON_TEXT: String = tr("SKINS")
 
 func enable():
 	upgrades_shop_button.disabled = false
