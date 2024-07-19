@@ -3,12 +3,12 @@ extends VBoxContainer
 @export var death_background: ColorRect
 
 func show_death_screen():
-	$DistanceLabel.text = "Пройденное расстояние: " + str(Data.distance) + "м"
-	$BestDistanceLabel.text = "Предыдущий лучший результат: " + str(Data.max_distance) + "м"
+	$DistanceLabel.text = tr("DEATH_SCORE") + ": " + str(Data.distance) + "м"
+	$BestDistanceLabel.text = tr("MAX_DISTANCE") + ": " + str(Data.max_distance) + "м"
 	
 	show()
 	death_background.show()
-	death_background.get_child(0).text = "Рубинов: " + str(Data.rubins)
+	death_background.get_child(0).text = tr("RUBINS") + ": " + str(Data.rubins)
 	$AdRespawnButton.disabled = false
 	$RestartButton.disabled = false
 
