@@ -15,7 +15,7 @@ var bananas : int = 3500
 var rubins: int = 1
 
 var selected_skin = "standart"
-var unlocked_skins: Array = ["Стандартный"]
+var unlocked_skins: Array = [tr("SK_STANDART")]
 
 func _ready():
 	dload()
@@ -49,7 +49,7 @@ func dload():
 	unlocked_skins = data["skins_aviable"]
 	bananas = data["bananas"]
 	max_distance = data["max_distance"]
-	rubins = data["rubins"]
+	rubins = data["rubins"] 
 
 func change_skin(skin_name: String = "none"):
 	if skin_name == "Киборг":
