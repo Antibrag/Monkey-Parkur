@@ -15,7 +15,7 @@ DEATH,YOUR DIED,ESTÁS MUERTO,ВЫ МЕРТВЫ
 DEATH_SCORE,Your distance,Distancia recorrida,Пройденное расстояние
 RESPAWN,Respawn for the ruby,Renacimiento del rubí,Возродиться за рубин
 RESTART,Restart,Reinicie,Перезапустить
-PT_DEATH,"After restarting, your distance traveled will be converted into bananas, and every 50 meters into 1 ruby","Al reiniciar, tu distancia recorrida se convertirá en plátanos y cada 50 metros en un rubí","После рестарта ваше пройденное расстояние будет конвертировано в бананы, а каждые 50 метров в рубин"
+PT_DEATH,"After restarting, your distance traveled \twill be converted into bananas, and every 50 meters into 1 ruby","Al reiniciar, tu distancia recorrida se convertirá en plátanos y cada 50 metros en un rubí","После рестарта ваше пройденное расстояние будет конвертировано в бананы, а каждые 50 метров в рубин"
 PT_SKINS,Double click on the skin to buy and select it (if it is already purchased),Haz doble clic en una skin para comprarla o seleccionarla (si ya está comprada),"Нажмите два раза по скину, чтобы купить или выбрать его (если он уже куплен)"
 PT_UPGRADES,"Double click on the upgrade to purchase it. After purchasing the upgrade, the next level will be - training","Pulsa dos veces sobre una mejora para comprarla. Después de comprar una mejora, el siguiente nivel será un nivel tutorial","Нажмите два раза по улучшению, чтобы купить его. После покупки улучшения следующий уровень будет - обучающим"
 TAIL,Strong tail,Aguardiente fuerte.,Крепкий хвост
@@ -62,3 +62,4 @@ UPGRADES,Upgrades,Mejoras,Улучшения
 SKINS,Skins,Pieles,Скины
 SHP_UPGRADES,Upgrades shop,Actualizar la tienda,Магазин улучшений
 SHP_SKINS,Skins shop,Tienda de piel,Магазин скинов
+AVIABLE,Aviable,Disponible,Имеется
