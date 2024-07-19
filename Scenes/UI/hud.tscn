@@ -32,6 +32,10 @@ font_color = Color(0.995764, 1, 0.318079, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_gwphp"]
 font_color = Color(1, 0.335514, 0.269596, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_k8ryd"]
+font_size = 12
+font_color = Color(0.644464, 0.557746, 0.344394, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_rjfng"]
 font_size = 48
 font_color = Color(0.999993, 0.404016, 0.439679, 1)
@@ -39,10 +43,6 @@ font_color = Color(0.999993, 0.404016, 0.439679, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_u7obe"]
 line_spacing = 0.0
 font_size = 1
-
-[sub_resource type="LabelSettings" id="LabelSettings_k8ryd"]
-font_size = 12
-font_color = Color(0.644464, 0.557746, 0.344394, 1)
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_x8gi5")
@@ -201,15 +201,15 @@ grow_vertical = 2
 max_text_lines = 3
 text_overrun_behavior = 0
 item_count = 5
-item_0/text = "Стандартный (Имеется)"
+item_0/text = "SK_STANDART ("
 item_0/icon = ExtResource("6_3c1ar")
-item_1/text = "Черныш (1000 бананов)"
+item_1/text = "SK_BLACK ("
 item_1/icon = ExtResource("6_8m3y8")
-item_2/text = "Тень (1500 бананов)"
+item_2/text = "SK_SHADOW ("
 item_2/icon = ExtResource("9_t18ou")
-item_3/text = "Демоненок (2000 бананов)"
+item_3/text = "SK_DEVIL ("
 item_3/icon = ExtResource("8_q0vsv")
-item_4/text = "Киборг  (3000 бананов)"
+item_4/text = "SK_CYBORG ("
 item_4/icon = ExtResource("10_k7qo3")
 
 [node name="NoteLabel" type="Label" parent="Shops/SkinsShopPanel"]
@@ -225,7 +225,7 @@ offset_right = 164.0
 offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Нажмите два раза по скину, чтобы купить или выбрать его (если он уже куплен)"
+text = "PT_SKINS"
 label_settings = SubResource("LabelSettings_dhisf")
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -284,7 +284,7 @@ offset_right = 164.0
 offset_bottom = 52.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Нажмите два раза по улучшению, чтобы купить его. После покупки улучшения следующий уровень будет - обучающим"
+text = "PT_UPGRADES"
 label_settings = SubResource("LabelSettings_dhisf")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -303,10 +303,29 @@ color = Color(0.137255, 0.137255, 0.137255, 1)
 layout_mode = 0
 offset_left = 24.0
 offset_top = 16.0
-offset_right = 64.0
+offset_right = 102.0
 offset_bottom = 39.0
 text = "Рубинов: "
 label_settings = SubResource("LabelSettings_gwphp")
+
+[node name="Note" type="Label" parent="DeathBackground"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -136.0
+offset_top = -176.0
+offset_right = 135.0
+offset_bottom = -159.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "PT_DEATH"
+label_settings = SubResource("LabelSettings_k8ryd")
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "ru_RU"
 
 [node name="DeathMenu" type="VBoxContainer" parent="." node_paths=PackedStringArray("death_background")]
 visible = false
@@ -367,16 +386,6 @@ language = "ru_RU"
 [node name="RestartButton" type="Button" parent="DeathMenu"]
 layout_mode = 2
 text = "RESTART"
-language = "ru_RU"
-
-[node name="Note" type="Label" parent="DeathMenu"]
-layout_mode = 2
-text = "После рестарта ваше пройденное расстояние
-будет конвертированно в бананы, а каждые 50
-метров в 1 рубин"
-label_settings = SubResource("LabelSettings_k8ryd")
-horizontal_alignment = 1
-vertical_alignment = 1
 language = "ru_RU"
 
 [connection signal="mouse_entered" from="Shops/Buttons/UpgradesShop" to="Shops/Buttons" method="_on_upgrades_shop_mouse_entered"]
