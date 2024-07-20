@@ -11,7 +11,7 @@ var afterbuy : String = "none"
 
 var distance : int
 var max_distance: int 
-var bananas : int = 3500
+var bananas : int = 0
 var rubins: int = 1
 
 var selected_skin = "standart"
