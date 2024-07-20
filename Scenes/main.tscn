@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dtc5yg3pvs3sa"]
+[gd_scene load_steps=12 format=3 uid="uid://dtc5yg3pvs3sa"]
 
 [ext_resource type="PackedScene" uid="uid://cnna6b656uwos" path="res://Scenes/UI/hud.tscn" id="1_cyp0w"]
 [ext_resource type="Texture2D" uid="uid://bthrn1tt243fr" path="res://Assets/Background/j4.png" id="1_xru2r"]
 [ext_resource type="Texture2D" uid="uid://dkl824ap3r2ys" path="res://Assets/Background/j3.png" id="2_bpmt5"]
 [ext_resource type="Texture2D" uid="uid://c2wyqe2ioxgcw" path="res://Assets/Background/j1.png" id="4_alb7h"]
+[ext_resource type="Texture2D" uid="uid://crsxfh5slswta" path="res://Assets/Background/j2.png" id="5_458r4"]
 [ext_resource type="PackedScene" uid="uid://b3csk5pyt6yvq" path="res://Scenes/Levels/level_start.tscn" id="5_uq8so"]
 [ext_resource type="PackedScene" uid="uid://dx84tr7uxfdwq" path="res://Scenes/player.tscn" id="5_ve0ds"]
 [ext_resource type="AudioStream" uid="uid://ehngro7p6vy1" path="res://Assets/Music/shadows-and-mist-escape-by-night-main-version-24858-05-39.mp3" id="7_ucue8"]
@@ -21,7 +22,7 @@ stream_2 = ExtResource("7_ucue8")
 [node name="Main" type="Node"]
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawn_node") instance=ExtResource("5_ve0ds")]
-position = Vector2(576, 344)
+position = Vector2(256, 304)
 respawn_node = NodePath("../RespawnNode")
 metadata/_edit_group_ = true
 
@@ -59,12 +60,20 @@ position = Vector2(434.75, -4)
 scale = Vector2(0.390234, 0.613889)
 texture = ExtResource("2_bpmt5")
 
+[node name="NearTrees" type="ParallaxLayer" parent="Background"]
+motion_mirroring = Vector2(1800, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/NearTrees"]
+position = Vector2(426.774, -5)
+scale = Vector2(0.320935, 0.7)
+texture = ExtResource("5_458r4")
+
 [node name="Trees" type="ParallaxLayer" parent="Background"]
 motion_mirroring = Vector2(1800, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Trees"]
-position = Vector2(548, -33)
-scale = Vector2(0.240104, 0.696296)
+position = Vector2(872, -13)
+scale = Vector2(0.236458, 0.696296)
 texture = ExtResource("4_alb7h")
 
 [node name="Levels" type="Node" parent="."]
