@@ -193,7 +193,7 @@ func _on_interaction_area_exited(area: Area2D):
 		$/root/Main/HUD.show_distance_label()
 		
 		var shops_node = $/root/Main/HUD/Shops
-		for i in shops_node.get_child_count():
+		for i in shops_node.get_child_count()-1:
 			shops_node.get_child(i).disable()
 
 func _on_forward_trigger_area_entered(area: Area2D):

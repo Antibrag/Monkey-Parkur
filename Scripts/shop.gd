@@ -1,6 +1,7 @@
 extends Control
 
 @export var anouther_shop: Control
+@export var buy_sound_player: AudioStreamPlayer
 @onready var products_container : ItemList = $GoodsContainer
 
 var aviable_str: String = " (" + tr("AVIABLE") + ")"
@@ -99,11 +100,22 @@ func _on_skins_container_item_activated(index: int):
 	var price = check_price(index)
 	if price > 0:
 		buy_skin(index, price)
+		buy_sound_player.stream = load("res://Assets/Sounds/buy.mp3")
 	elif price == -1:
 		var item_text: String = products_container.get_item_text(index)
 		Data.change_skin(item_text.substr(0, item_text.find("(")-1))
+		buy_sound_player.stream = load("res://Assets/Sounds/buy.mp3")
+	else:
+		buy_sound_player.stream = load("res://Assets/Sounds/buy_out.mp3")
+	
+	buy_sound_player.play()
 	
 func _on_upgrades_container_item_activated(index: int):
 	var price = check_price(index)
 	if price > 0:
 		buy_upgrade(index, price)
+		buy_sound_player.stream = load("res://Assets/Sounds/buy.mp3")
+	else:
+		buy_sound_player.stream = load("res://Assets/Sounds/buy_out.mp3")
+	
+	buy_sound_player.play()
