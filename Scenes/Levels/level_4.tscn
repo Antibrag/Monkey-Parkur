@@ -86,4 +86,4 @@ tile_set = ExtResource("4_xdkj6")
 [node name="LevelGrettTrigger" parent="." instance=ExtResource("7_eswkd")]
 metadata/LevelIndex = 4
 metadata/Author = &"San4hi"
-metadata/Requires = "Реакции?"
+metadata/Requires = "Реакция?"

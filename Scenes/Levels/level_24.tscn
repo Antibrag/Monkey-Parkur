@@ -49,4 +49,4 @@ tile_set = ExtResource("3_x8jup")
 [node name="LevelGrettTrigger" parent="." instance=ExtResource("6_8gobd")]
 metadata/LevelIndex = 24
 metadata/Author = &"San4hi"
-metadata/Requires = "Крепкий хвост, рывок и чувство юмора, которогонету у автораы"
+metadata/Requires = "Крепкий хвост, рывок и чувство юмора, которогонету у автора"
