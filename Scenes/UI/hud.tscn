@@ -164,7 +164,7 @@ language = "ru_RU"
 wait_time = 0.5
 one_shot = true
 
-[node name="SkinsShopPanel" type="Control" parent="Shops" node_paths=PackedStringArray("anouther_shop")]
+[node name="SkinsShopPanel" type="Control" parent="Shops" node_paths=PackedStringArray("anouther_shop", "buy_sound_player")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -179,6 +179,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_f5wn3")
 anouther_shop = NodePath("../UpgradesShopPanel")
+buy_sound_player = NodePath("../BuySoundPlayer")
 metadata/_edit_group_ = true
 
 [node name="ShopName" type="Label" parent="Shops/SkinsShopPanel"]
@@ -230,7 +231,7 @@ label_settings = SubResource("LabelSettings_dhisf")
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="UpgradesShopPanel" type="Control" parent="Shops" node_paths=PackedStringArray("anouther_shop")]
+[node name="UpgradesShopPanel" type="Control" parent="Shops" node_paths=PackedStringArray("anouther_shop", "buy_sound_player")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -245,6 +246,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_f5wn3")
 anouther_shop = NodePath("../SkinsShopPanel")
+buy_sound_player = NodePath("../BuySoundPlayer")
 
 [node name="ShopName" type="Label" parent="Shops/UpgradesShopPanel"]
 layout_mode = 1
@@ -289,6 +291,8 @@ label_settings = SubResource("LabelSettings_dhisf")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="BuySoundPlayer" type="AudioStreamPlayer" parent="Shops"]
 
 [node name="DeathBackground" type="ColorRect" parent="."]
 visible = false
