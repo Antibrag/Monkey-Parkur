@@ -35,7 +35,8 @@ func restart():
 	
 	if Data.distance > Data.max_distance:
 		Data.max_distance = Data.distance
-		Data.save()
+	
+	Data.save()
 		
 	for level in loaded_levels:
 		level.queue_free()
@@ -44,7 +45,7 @@ func restart():
 	fill_aviable_levels_array()
 
 	add_level(LEVEL_SCENE_PATH + "start.tscn", 0)
-	$/root/Main/RespawnNode.position = Vector2(300, 100)
+	$/root/Main/RespawnNode.position = Vector2(300, 300)
 
 func add_level(level_scene_name: String, k_positon = Data.next_level_idx):
 	var level : Node2D = load(level_scene_name).instantiate()
