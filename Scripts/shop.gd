@@ -72,18 +72,18 @@ func _ready():
 			products_container.set_item_text(1, tr("DASH") + " (" + "500 " + tr("BANANAS") + ")")
 
 		return
+	
+	var skins_list: Dictionary = {
+		tr("SK_STANDART"): tr("AVIABLE"),
+		tr("SK_BLACK"): "1000 " + tr("BANANAS"),
+		tr("SK_SHADOW"): "1500 " + tr("BANANAS"),
+		tr("SK_DEVIL"): "2000 " + tr("BANANAS"),
+		tr("SK_CYBORG"): "3500 " + tr("BANANAS")
+	}
 		
 	for i in products_container.item_count:
 		var item_text: String = products_container.get_item_text(i)
 		var item_name: String = item_text.substr(0, item_text.find("(")-1)
-
-		var skins_list: Dictionary = {
-			tr("SK_STANDART"): tr("AVIABLE"),
-			tr("SK_BLACK"): "1000 " + tr("BANANAS"),
-			tr("SK_SHADOW"): "1500 " + tr("BANANAS"),
-			tr("SK_DEVIL"): "2000 " + tr("BANANAS"),
-			tr("SK_CYBORG"): "3500 " + tr("BANANAS")
-		}
 
 		if Data.unlocked_skins.find(tr(item_name)) != -1:
 			products_container.set_item_text(i, tr(item_name) + aviable_str)

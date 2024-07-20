@@ -17,6 +17,7 @@ var rubins: int = 1
 var selected_skin = "standart"
 var unlocked_skins: Array = [tr("SK_STANDART")]
 
+
 func _ready():
 	dload()
 
@@ -51,23 +52,22 @@ func dload():
 	max_distance = data["max_distance"]
 	rubins = data["rubins"] 
 
-func change_skin(skin_name: String = "none"):
-	if skin_name == "Киборг":
-		print(skin_name)
+func change_skin(skin_name: String):
 	if not unlocked_skins.has(skin_name):
 		unlocked_skins.append(skin_name)
-			
-	match skin_name:
-		"Стандартный":
-			selected_skin = "standart"
-		"Черныш":
-			selected_skin = "black"
-		"Демоненок":
-			selected_skin = "devil"
-		"Тень":
-			selected_skin = "shadow"
-		"Киборг ":
-			selected_skin = "cyber"
+		
+	#if use match -> match will have a constant variables, but I'm use a variative translations
+	#So, I'm too lazy to rewrite the skin system 
+	if skin_name == tr("SK_STANDART"):
+		selected_skin = "standart"
+	elif skin_name == tr("SK_BLACK"):
+		selected_skin = "black"
+	elif skin_name == tr("SK_DEVIL"):
+		selected_skin = "devil"
+	elif skin_name == tr("SK_SHADOW"):
+		selected_skin = "shadow"
+	elif skin_name == tr("SK_CYBORG"):
+		selected_skin = "cyber"
 
 func reset_levels_idxs():
 	next_level_idx = 1
